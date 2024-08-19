@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="date"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+button.subtask-button {
+    padding: 5px 10px;
+    background: #4e085f;
+    margin-left: 20px; /* Increased margin to create more space */
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 40px;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url('images/unchecked-10.png'); /* Ensure the path to your image is correct */
+    background-size: cover;
+    background-position: center;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url('images/checked1.png'); /* Add your 'checked' image here */
+}
+
+ul li .due-date {
+    color: #888;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+ul li .subtasks {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li .subtasks li {
+    padding-left: 30px;
+    position: relative;
+}
+
+ul li .subtasks li::before {
+    content: ''; /* No image for subtasks */
+}
+
+ul li .subtasks li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+button.edit-button {
+    padding: 5px 10px;
+    background: #007bff;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
